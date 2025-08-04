@@ -1,0 +1,236 @@
+:root{
+    --pri: #B2B0E8;
+    --sec: #1A2A80;
+    --tri1: #7A85C1;
+    --tri2: #3B38A0;
+}
+@font-face {
+    font-family: light;
+    src: url('./font/AeonikTRIAL-Light.otf');
+}
+@font-face {
+    font-family: bold;
+    src: url('./font/AeonikTRIAL-Bold.otf');
+}
+@font-face {
+    font-family: normal;
+    src: url('./font/AeonikTRIAL-Regular.otf');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--pri);
+    font-family: normal;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: var(--sec);
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: var(--tri2);
+}
+
+section.allelem {
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap : 20px;
+    position: absolute
+    
+}
+
+.elem{
+    background-color: var(--pri);
+    height: 300px;
+    width: 185px;
+    overflow: hidden;
+    border-radius: 10px;
+    color: var(--tri2);
+    position: relative;
+    transition: all ease 0.2s;
+}
+
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.elem h2 {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    font-family: bold;
+    font-size: 20px;
+    color:#3B38A0;
+}
+
+.elem:active {
+    scale: 0.95;
+}
+
+.fullelem{
+    height: 100%;
+    width: 100%;
+    background-color: var(--sec);
+    padding: 30px;
+    display: none;
+    position: absolute;
+}
+
+.back{
+    position: absolute;
+    right: 5%;
+    background-color: red;
+    border-radius: 10px;
+    padding: 12px 15px;
+    border: none;
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+button:active{
+    scale: 0.95;
+}
+
+.todolist-page {
+    display: block;
+}
+
+.todolist-page h2{
+    font-size:  40px;
+}
+
+.todolist-page .todo-container{
+    height: 80%;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todolist-page .todo-container .addtask{
+    width: 33%;
+    height: 100%;
+    background-color: var(--tri2);
+    border-radius: 20px;
+}
+.todolist-page .todo-container .alltask{
+    width: 65%;
+    height: 100%;
+    background-color:var(--tri2);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    overflow: auto;
+}
+
+.todolist-page .todo-container .addtask form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+}
+.todo-container .addtask form input#task-inp{
+    padding: 10px 25px;
+    width: 100%;
+    font-size: 25px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: var(--tri2);
+    margin-bottom: 20px;
+}
+
+.todo-container .addtask form textarea{
+    padding: 10px 25px;
+    width: 100%;
+    font-size: 20px;
+    background-color:white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: var(--tri2);
+    margin-bottom: 20px;
+}
+
+.todo-container .addtask form button{
+    padding: 10px 25px;
+    width: 100%;
+    font-size: 18px;
+    background-color: rgb(31, 179, 172);
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 20px;
+    color: brown;
+    transition: all ease 0.3s;
+}
+
+.todo-container .addtask form button:active{
+    scale: 0.93;
+}
+
+.task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #7A85C1;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.task h5{
+    color: var(--tri2);
+    font-size: bold;
+    font-size: 15px;
+}
+
+.task button{
+    background-color: rgb(26, 149, 26);
+    border: none;
+    padding: 5px 6px;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+}
+
+.mark-imp{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+
+.mark-imp input{
+
+}
