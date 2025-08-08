@@ -211,6 +211,24 @@ button:active{
     color: var(--tri2);
     font-size: bold;
     font-size: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.task h5 span{
+    background-color: red;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 50px;
+    font-size: 8px;
+}
+
+.task h5 span.true{
+    opacity: 1;
+}
+.task h5 span.false{
+    opacity: 0;
 }
 
 .task button{

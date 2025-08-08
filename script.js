@@ -25,9 +25,44 @@ var taskinput = document.querySelector('.addtask form #task-inp')
 var taskdetails = document.querySelector('.addtask form textarea')
 var taskcheck = document.querySelector('.addtask form #check')
 
+var currenttask = []
+
+if(localStorage.getItem('currenttask')){
+  currenttask = JSON.parsew(localStorage.getItem('currenttask'))
+}
+else{
+  console.log('task list is empty');
+  
+}
+
+
+function rendertask(){
+  
+var alltask = document.querySelector('.alltask')
+var sum = ''
+
+currenttask.forEach(function(e){
+  sum += `<div class="task">
+                        <h5>${e.task} <span class='${e.imp}'>imp</span></h5>
+                        <button>Mark as Completed</button>
+                    </div>`
+})
+
+alltask.innerHTML = sum
+}
+
+rendertask()
+
+
 form.addEventListener('submit',function(e){
   e.preventDefault()
-  console.log(taskinput.value, taskdetails.value, taskcheck.checked);
+  currenttask.push({task:taskinput.value, details:taskdetails.value, imp:taskcheck.checked});
+  localStorage.setItem('currenttask', JSON.stringify(currenttask))
+  taskinput.value = '';
+  taskdetails.value = '';
+  taskcheck.checked = false;
+  rendertask()
+
   
 })
   
